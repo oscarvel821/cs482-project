@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 In this tutorial, you will learn how to:
 
 Create a Dockerfile file describing a simple Python container.
@@ -61,3 +62,7 @@ If you're using Docker Compose, a docker-compose.yml and docker-compose.debug.ym
 If one does not already exist, a requirements.txt file for capturing all app dependencies.
 
 Important Note: To use our setup, the Python framework (Django/Flask) and Gunicorn must be included in the requirements.txt file. If the virtual environment/host machine already has these prerequisites installed and is supposed to be identical to the container environment, ensure app dependencies are ported over by running pip freeze > requirements.txt in the terminal. This will overwrite your current requirements.txt file.
+=======
+# cs482-project
+Oscar Velazquez
+>>>>>>> 7bfd4e60fb74673990e7d29885a217986c9cd913
