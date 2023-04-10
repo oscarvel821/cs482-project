@@ -6,8 +6,17 @@ from transformers import pipeline
 
 model_name = "distilbert-base-uncased-finetuned-sst-2-english"
 
-classifier = pipeline("sentiment-analysis", model=model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 results = classifier(["We are very happy to show you the transformers library.", "We hope you dont hate it"])
 
 for result in results:
   print(result)
+  
+tokens = tokenizer.tokenize("We are very happy to show you the transformers library.")
+token_ids = tokenizer.convert_token_to_ids(tokens)
+input_ids = tokenizer("We are very happy to show you the transformers library.")
+
+print(f'  tokens:{tokens}')
