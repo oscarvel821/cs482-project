@@ -19,7 +19,7 @@ for result in results:
 text = st.text_area("enter some text")
 
 if text:
-  out = classifier(out)
+  out = classifier(text)
   st.json(out)
   
 # tokens = tokenizer.tokenize("We are very happy to show you the transformers library.")
