@@ -9,3 +9,4 @@ app_file: app.py
 pinned: false
 ---
 
+huggingface.co/spaces/oscarvel821/sentiment-analysis-app
