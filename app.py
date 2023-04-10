@@ -15,8 +15,14 @@ results = classifier(["We are very happy to show you the transformers library.",
 for result in results:
   print(result)
   
-tokens = tokenizer.tokenize("We are very happy to show you the transformers library.")
-token_ids = tokenizer.convert_token_to_ids(tokens)
-input_ids = tokenizer("We are very happy to show you the transformers library.")
+text = st.text_area("enter some text")
 
-print(f'  tokens:{tokens}')
+if text:
+  out = classifier(out)
+  st.json(out)
+  
+# tokens = tokenizer.tokenize("We are very happy to show you the transformers library.")
+# token_ids = tokenizer.convert_token_to_ids(tokens)
+# input_ids = tokenizer("We are very happy to show you the transformers library.")
+
+# print(f'  tokens:{tokens}')
