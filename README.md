@@ -1,5 +1,5 @@
 ---
-title: Sentiment Analysis App 
+title: Sentiment Analysis App
 emoji: 🚀
 colorFrom: purple
 colorTo: yellow
