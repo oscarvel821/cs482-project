@@ -3,7 +3,7 @@ import pandas as pd
 from transformers import pipeline
 from transformers import AutoTokenizer ,DistilBertTokenizerFast, AutoModelForSequenceClassification
 
-@st.cache_data
+@st.experimental_memo
 def classifier1_data(_classifier, comments):
   test_comments_prob = _classifier(comments)
 
@@ -32,7 +32,7 @@ def classifier1_data(_classifier, comments):
         }
     )
 
-@st.cache_data
+@st.experimental_memo
 def classifier2_data(_classifier, comments):
   test_comments_prob = _classifier(comments)
 
