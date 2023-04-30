@@ -92,7 +92,7 @@ test_comments = df['comment_text'].values.tolist()
 
 index = 0
 
-classifier1 = pipeline('sentiment-analysis', model='oscarvel821/my_model_3', return_all_scores=True)
+classifier1 = pipeline('sentiment-analysis', model='oscarvel821/my_model', return_all_scores=True)
 
 model = AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased-finetuned-sst-2-english')
 tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased-finetuned-sst-2-english')
@@ -103,13 +103,13 @@ classifiers = [classifier1, classifier2]
 
 col1, col2 = st.columns(2)
 with col1:
-  option = st.selectbox('Select a model', ('Finetuned bert', 'Distilbert base uncased') )
+  option = st.selectbox('Select a model', ('Finetuned bert', 'distilbert-base-uncased-finetuned-sst-2-english') )
 
   st.write("You selected:", option)
 
   if option == 'Finetuned bert':
     index = 0
-  elif option == 'Distilbert base uncased':
+  elif option == 'distilbert-base-uncased-finetuned-sst-2-english':
     index = 1
 
 with col2:
