@@ -86,7 +86,7 @@ st.markdown("While the Toxic Comment Classifier App mainly focuses on the Finetu
 for label in ['Postive', 'Negative']:
    st.markdown('* ' + label)
 
-df = pd.read_csv(r'data\test_examples.csv')
+df = pd.read_csv(r'data/test_examples.csv')
 
 test_comments = df['comment_text'].values.tolist()
 
