@@ -54,7 +54,7 @@ def classifier2_data(_classifier, comments):
   return pd.DataFrame(
         {
             "text_comment": test_comments,
-            "class one": highest,
+            "class 1": highest,
             "prob 1": highest_prob,
             "class 2" : second_highest,
             "prob 2" : second_highest_prob
